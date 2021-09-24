@@ -1,8 +1,6 @@
 package com.company;
 
-import com.company.hotdoginter.BuilderHotDog;
 import com.company.hotdoginter.HotDog;
-import com.company.hotdogsreciept.RussianHotDog;
 import com.company.paymentAndAction.PaymentInter;
 
 import java.util.ArrayList;

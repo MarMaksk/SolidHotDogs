@@ -20,6 +20,9 @@ public class MexicanHotDog extends HotDogs {
         currentHD = countMexHD;
     }
 
+    public MexicanHotDog() {
+    }
+
     public MexicanHotDog(Builder builder) {
         jalapena = builder.uniqueFilling;
         mayone = builder.mayone;

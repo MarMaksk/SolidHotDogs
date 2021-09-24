@@ -20,6 +20,9 @@ public class RussianHotDog extends HotDogs {
         currentHD = countRusHD;
     }
 
+    public RussianHotDog() {
+    }
+
     public RussianHotDog(Builder builder) {
         saltCucumber = builder.uniqueFilling;
         mayone = builder.mayone;

@@ -16,6 +16,9 @@ public class JapanHotDog extends HotDogs {
     private boolean onion;
     private boolean cucumber;
 
+    public JapanHotDog() {
+    }
+
     private JapanHotDog(Builder builder) {
         wasabi = builder.uniqueFilling;
         mayone = builder.mayone;
