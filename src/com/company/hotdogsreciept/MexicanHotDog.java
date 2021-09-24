@@ -56,6 +56,11 @@ public class MexicanHotDog extends HotDogs {
     }
 
     @Override
+    public int getPrice() {
+        return price;
+    }
+
+    @Override
     public String getName() {
         return "Mexican hotdog";
     }

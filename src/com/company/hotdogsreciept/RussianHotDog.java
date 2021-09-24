@@ -60,6 +60,11 @@ public class RussianHotDog extends HotDogs {
     }
 
     @Override
+    public int getPrice() {
+        return price;
+    }
+
+    @Override
     public String toString() {
         return "RussianHotDog{" +
                 "price=" + price +

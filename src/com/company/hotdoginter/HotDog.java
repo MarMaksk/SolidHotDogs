@@ -8,4 +8,6 @@ public interface HotDog extends Serializable, Builder {
 
     String getName();
 
+    int getPrice();
+
 }
