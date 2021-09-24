@@ -1,7 +1,7 @@
-package com.company;
+package com.company.paymentAndAction;
 
 import com.company.hotdoginter.HotDog;
 
-public interface paymentInter {
+public interface PaymentInter {
     double pay(HotDog... hotDog);
 }

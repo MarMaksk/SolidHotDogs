@@ -1,6 +1,6 @@
-package com.company;
+package com.company.paymentAndAction;
 
-public class priceList {
+public class PriceList {
 
     private static int priceJap = 8;
     private static int priceMex = 5;

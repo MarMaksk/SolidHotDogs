@@ -1,14 +1,13 @@
 package com.company.hotdogsreciept;
 
-import com.company.hotdoginter.HotDog;
 import com.company.hotdoginter.HotDogs;
-import com.company.priceList;
+import com.company.paymentAndAction.PriceList;
 
 public class JapanHotDog extends HotDogs {
 
     private static int countJapHD = 0;
     private int currentHD;
-    private int price = priceList.getPriceJap();
+    private int price = PriceList.getPriceJap();
     private boolean wasabi;
     private boolean mayone = false;
     private boolean ketchup = false;
