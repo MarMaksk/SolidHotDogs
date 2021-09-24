@@ -1,11 +1,12 @@
 package com.company.hotdogsreciept;
 
 import com.company.hotdoginter.HotDogs;
+import com.company.priceList;
 
 public class RussianHotDog extends HotDogs {
     private static int countRusHD = 0;
     private int currentHD;
-    private int price = 5;
+    private int price = priceList.getPriceRus();
     private boolean saltCucumber;
     private boolean mayone = false;
     private boolean ketchup = false;
