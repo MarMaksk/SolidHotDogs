@@ -6,13 +6,16 @@ import java.io.File;
 import java.io.Serializable;
 
 public class RussianHotDog extends HotDogs {
-    private int countRusHD = 0;
+    private static int countRusHD = 0;
+    private boolean saltCucumber = false;
+
     {
         countRusHD++;
     }
 
-    public RussianHotDog(boolean mayone, boolean ketchup, boolean onion, boolean cucumber) {
+    public RussianHotDog(boolean mayone, boolean ketchup, boolean onion, boolean cucumber, boolean saltCucumber) {
         super(mayone, ketchup, onion, cucumber);
+        this.saltCucumber = saltCucumber;
     }
 
     @Override

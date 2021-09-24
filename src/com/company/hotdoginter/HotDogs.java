@@ -22,7 +22,8 @@ public abstract class HotDogs implements HotDog {
     private void compositionToFile(HotDog composition, int numberObj) {
         File file = new File("composition" + composition.getName() + numberObj + ".txt");
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file))) {
-            file.createNewFile();
+            if (!file.exists())
+                file.createNewFile();
             oos.writeObject(composition);
         } catch (IOException e) {
             e.printStackTrace();
