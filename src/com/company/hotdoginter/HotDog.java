@@ -2,7 +2,7 @@ package com.company.hotdoginter;
 
 import java.io.Serializable;
 
-public interface HotDog extends Serializable, Builder {
+public interface HotDog extends Serializable {
 
     void showComposition();
 
@@ -10,4 +10,5 @@ public interface HotDog extends Serializable, Builder {
 
     int getPrice();
 
+    HotDog createHotDog();
 }

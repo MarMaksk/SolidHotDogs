@@ -1,5 +1,7 @@
 package com.company.hotdogsreciept;
 
+import com.company.hotdoginter.BuilderHotDog;
+import com.company.hotdoginter.HotDog;
 import com.company.hotdoginter.HotDogs;
 import com.company.paymentAndAction.PriceList;
 
@@ -9,13 +11,17 @@ public class JapanHotDog extends HotDogs {
     private int currentHD;
     private int price = PriceList.getPriceJap();
     private boolean wasabi;
-    private boolean mayone = false;
-    private boolean ketchup = false;
-    private boolean onion = false;
-    private boolean cucumber = false;
+    private boolean mayone;
+    private boolean ketchup;
+    private boolean onion;
+    private boolean cucumber;
 
-    public JapanHotDog(boolean wasabi) {
-        this.wasabi = wasabi;
+    private JapanHotDog(Builder builder) {
+        wasabi = builder.uniqueFilling;
+        mayone = builder.mayone;
+        ketchup = builder.ketchup;
+        onion = builder.onion;
+        cucumber = builder.cucumber;
     }
 
     {
@@ -23,24 +29,45 @@ public class JapanHotDog extends HotDogs {
         currentHD = countJapHD;
     }
 
-    @Override
-    public void withMayone(boolean put) {
-        this.mayone = put;
-    }
+    public static class Builder implements BuilderHotDog {
+        private boolean uniqueFilling;
+        private boolean mayone = false;
+        private boolean ketchup = false;
+        private boolean onion = false;
+        private boolean cucumber = false;
 
-    @Override
-    public void withKetchup(boolean put) {
-        this.ketchup = put;
-    }
+        public Builder(boolean uniqueFilling) {
+            this.uniqueFilling = uniqueFilling;
+        }
 
-    @Override
-    public void withOnion(boolean put) {
-        this.onion = put;
-    }
+        @Override
+        public BuilderHotDog withMayone() {
+            mayone = true;
+            return this;
+        }
 
-    @Override
-    public void withCucmber(boolean put) {
-        this.cucumber = put;
+        @Override
+        public BuilderHotDog withKetchup() {
+            ketchup = true;
+            return this;
+        }
+
+        @Override
+        public BuilderHotDog withOnion() {
+            onion = true;
+            return this;
+        }
+
+        @Override
+        public BuilderHotDog withCucumber() {
+            cucumber = true;
+            return this;
+        }
+
+        @Override
+        public HotDog build() {
+            return new JapanHotDog(this);
+        }
     }
 
     @Override

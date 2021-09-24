@@ -2,23 +2,25 @@ package com.company.paymentAndAction;
 
 import com.company.hotdoginter.HotDog;
 
+import java.util.List;
+
 public class PaymentCash extends Payment implements ActionInter {
     @Override
-    public double pay(HotDog... hotDog) {
+    public double pay(List<HotDog> hotDog) {
         double discount = checkAction(hotDog);
         double sum = 0;
         for (HotDog hd : hotDog)
             sum += hd.getPrice();
-        sum = sum * discount / hotDog.length;
+        sum = sum * discount / hotDog.size();
         super.setIncome(getIncome() + sum);
-        super.setSaledHotdog(getSaledHotdog() + hotDog.length);
+        super.setSaledHotdog(getSaledHotdog() + hotDog.size());
         return sum;
     }
 
 
     @Override
-    public double checkAction(HotDog... hotDog) {
-        switch (hotDog.length) {
+    public double checkAction(List<HotDog> hotDog) {
+        switch (hotDog.size()) {
             case 3:
                 return 0.9;
             case 4:
@@ -32,7 +34,7 @@ public class PaymentCash extends Payment implements ActionInter {
             default:
                 break;
         }
-        if (hotDog.length > 7)
+        if (hotDog.size() > 7)
             return 0.5;
         return 1;
     }
