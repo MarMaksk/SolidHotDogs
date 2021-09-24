@@ -30,4 +30,20 @@ public abstract class HotDogs implements HotDog {
             e.printStackTrace();
         }
     }
+
+    public boolean isMayone() {
+        return mayone;
+    }
+
+    public boolean isKetchup() {
+        return ketchup;
+    }
+
+    public boolean isOnion() {
+        return onion;
+    }
+
+    public boolean isCucumber() {
+        return cucumber;
+    }
 }

@@ -14,4 +14,5 @@ public class RussianHotDog extends HotDogs {
     public void showComposition() {
 
     }
+
 }
