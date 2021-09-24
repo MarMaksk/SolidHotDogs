@@ -23,12 +23,12 @@ public class RussianHotDog extends HotDogs {
 
     @Override
     public void showComposition() {
-        System.out.println(this.toString());
+        System.out.println(this);
     }
 
     @Override
     public String getName() {
-        return "Russian hot dog";
+        return "Russian hotdog";
     }
 
     @Override

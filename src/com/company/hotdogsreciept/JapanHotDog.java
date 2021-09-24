@@ -3,23 +3,24 @@ package com.company.hotdogsreciept;
 import com.company.hotdoginter.HotDog;
 import com.company.hotdoginter.HotDogs;
 
-public class MexicanHotDog extends HotDogs {
-    private static int countMexHD = 0;
+public class JapanHotDog extends HotDogs {
+
+    private static int countJapHD = 0;
     private int currentHD;
     private int price = 5;
-    private boolean jalapena = false;
+    private boolean wasabi;
     private boolean mayone = false;
     private boolean ketchup = false;
     private boolean onion = false;
     private boolean cucumber = false;
 
-    {
-        countMexHD++;
-        currentHD = countMexHD;
+    public JapanHotDog(boolean wasabi) {
+        this.wasabi = wasabi;
     }
 
-    public MexicanHotDog(boolean jalapena) {
-        this.jalapena = jalapena;
+    {
+        countJapHD++;
+        currentHD = countJapHD;
     }
 
     @Override
@@ -43,7 +44,7 @@ public class MexicanHotDog extends HotDogs {
     }
 
     @Override
-    public MexicanHotDog createHotDog() {
+    public JapanHotDog createHotDog() {
         this.compositionToConsole(this);
         this.compositionToFile(this, currentHD);
         return this;
@@ -56,19 +57,6 @@ public class MexicanHotDog extends HotDogs {
 
     @Override
     public String getName() {
-        return "Mexican hotdog";
-    }
-
-    @Override
-    public String toString() {
-        return "MexicanHotDog{" +
-                "currentHD=" + currentHD +
-                ", price=" + price +
-                ", jalapena=" + jalapena +
-                ", mayone=" + mayone +
-                ", ketchup=" + ketchup +
-                ", onion=" + onion +
-                ", cucumber=" + cucumber +
-                '}';
+        return "Japan hotdog";
     }
 }
