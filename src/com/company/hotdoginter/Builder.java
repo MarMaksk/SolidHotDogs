@@ -1,6 +1,5 @@
 package com.company.hotdoginter;
 
-import com.company.hotdogsreciept.RussianHotDog;
 
 public interface Builder {
 
@@ -12,6 +11,6 @@ public interface Builder {
 
     void withCucmber(boolean put);
 
-    RussianHotDog getHotDog();
+    HotDog createHotDog();
 
 }

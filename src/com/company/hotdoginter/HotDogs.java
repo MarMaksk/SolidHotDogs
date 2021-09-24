@@ -4,11 +4,11 @@ import java.io.*;
 
 public abstract class HotDogs implements HotDog {
 
-    private void compositionToConsole(String composition) {
+    public void compositionToConsole(HotDog composition) {
         System.out.println(composition);
     }
 
-    private void compositionToFile(HotDog composition, int numberObj) {
+    public void compositionToFile(HotDog composition, int numberObj) {
         File file = new File("composition" + composition.getName() + numberObj + ".txt");
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file))) {
             if (!file.exists())

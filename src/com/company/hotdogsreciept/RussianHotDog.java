@@ -5,7 +5,7 @@ import com.company.hotdoginter.HotDogs;
 public class RussianHotDog extends HotDogs {
     private static int countRusHD = 0;
     private int price = 5;
-    private boolean saltCucumber = true;
+    private boolean saltCucumber;
     private boolean mayone = false;
     private boolean ketchup = false;
     private boolean onion = false;
@@ -15,14 +15,18 @@ public class RussianHotDog extends HotDogs {
         countRusHD++;
     }
 
+    public RussianHotDog(boolean saltCucumber) {
+        this.saltCucumber = saltCucumber;
+    }
+
     @Override
     public void showComposition() {
-
+        System.out.println(this.toString());
     }
 
     @Override
     public String getName() {
-        return null;
+        return "Russian hot dog";
     }
 
     @Override
@@ -46,8 +50,10 @@ public class RussianHotDog extends HotDogs {
     }
 
     @Override
-    public RussianHotDog getHotDog() {
-        return new RussianHotDog();
+    public RussianHotDog createHotDog() {
+        this.compositionToConsole(this);
+        this.compositionToFile(this, countRusHD);
+        return this;
     }
 
     @Override
