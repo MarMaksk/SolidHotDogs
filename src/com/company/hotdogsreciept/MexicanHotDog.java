@@ -8,7 +8,7 @@ import com.company.paymentAndAction.PriceList;
 public class MexicanHotDog extends HotDogs {
     private static int countMexHD = 0;
     private int currentHD;
-    private int price = PriceList.getPriceMex();
+    private double price = PriceList.getPriceMex();
     private boolean jalapena;
     private boolean mayone;
     private boolean ketchup;
@@ -82,7 +82,7 @@ public class MexicanHotDog extends HotDogs {
     }
 
     @Override
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 

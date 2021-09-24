@@ -9,7 +9,7 @@ public class JapanHotDog extends HotDogs {
 
     private static int countJapHD = 0;
     private int currentHD;
-    private int price = PriceList.getPriceJap();
+    private double price = PriceList.getPriceJap();
     private boolean wasabi;
     private boolean mayone;
     private boolean ketchup;
@@ -83,7 +83,7 @@ public class JapanHotDog extends HotDogs {
     }
 
     @Override
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 

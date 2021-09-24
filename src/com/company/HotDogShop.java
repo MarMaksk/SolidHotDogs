@@ -1,4 +1,4 @@
-package com.company.hotdogsreciept;
+package com.company;
 
 import com.company.hotdoginter.BuilderHotDog;
 import com.company.hotdoginter.HotDog;
@@ -34,7 +34,7 @@ public class HotDogShop {
         return hotDog.get(position).getName();
     }
 
-    public int getPrice(int position) {
+    public double getPrice(int position) {
         return hotDog.get(position).getPrice();
     }
 

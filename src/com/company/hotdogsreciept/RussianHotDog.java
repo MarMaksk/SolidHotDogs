@@ -8,7 +8,7 @@ import com.company.paymentAndAction.PriceList;
 public class RussianHotDog extends HotDogs {
     private static int countRusHD = 0;
     private int currentHD;
-    private int price = PriceList.getPriceRus();
+    private double price = PriceList.getPriceRus();
     private boolean saltCucumber;
     private boolean mayone = false;
     private boolean ketchup = false;
@@ -89,7 +89,7 @@ public class RussianHotDog extends HotDogs {
     }
 
     @Override
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 

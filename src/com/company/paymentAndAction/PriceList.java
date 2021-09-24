@@ -2,19 +2,19 @@ package com.company.paymentAndAction;
 
 public class PriceList {
 
-    private static int priceJap = 8;
-    private static int priceMex = 5;
-    private static int priceRus = 3;
+    private static double priceJap = 8;
+    private static double priceMex = 5;
+    private static double priceRus = 3;
 
-    public static int getPriceJap() {
+    public static double getPriceJap() {
         return priceJap;
     }
 
-    public static int getPriceMex() {
+    public static double getPriceMex() {
         return priceMex;
     }
 
-    public static int getPriceRus() {
+    public static double getPriceRus() {
         return priceRus;
     }
 }

@@ -8,7 +8,7 @@ public interface HotDog extends Serializable {
 
     String getName();
 
-    int getPrice();
+    double getPrice();
 
     HotDog createHotDog();
 }
