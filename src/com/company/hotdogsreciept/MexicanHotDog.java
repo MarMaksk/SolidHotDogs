@@ -1,34 +1,25 @@
 package com.company.hotdogsreciept;
 
+import com.company.hotdoginter.HotDog;
 import com.company.hotdoginter.HotDogs;
 
-public class RussianHotDog extends HotDogs {
-    private static int countRusHD = 0;
+public class MexicanHotDog extends HotDogs {
+    private static int countMexHD = 0;
     private int currentHD;
     private int price = 5;
-    private boolean saltCucumber;
+    private boolean jalapena = false;
     private boolean mayone = false;
     private boolean ketchup = false;
     private boolean onion = false;
     private boolean cucumber = false;
 
     {
-        countRusHD++;
-        currentHD = countRusHD;
+        countMexHD++;
+        currentHD = countMexHD;
     }
 
-    public RussianHotDog(boolean saltCucumber) {
-        this.saltCucumber = saltCucumber;
-    }
-
-    @Override
-    public void showComposition() {
-        System.out.println(this.toString());
-    }
-
-    @Override
-    public String getName() {
-        return "Russian hot dog";
+    public MexicanHotDog(boolean jalapena) {
+        this.jalapena = jalapena;
     }
 
     @Override
@@ -52,17 +43,28 @@ public class RussianHotDog extends HotDogs {
     }
 
     @Override
-    public RussianHotDog createHotDog() {
+    public MexicanHotDog createHotDog() {
         this.compositionToConsole(this);
         this.compositionToFile(this, currentHD);
         return this;
     }
 
     @Override
+    public void showComposition() {
+        System.out.println(this.toString());
+    }
+
+    @Override
+    public String getName() {
+        return "Mexican hot dog";
+    }
+
+    @Override
     public String toString() {
-        return "RussianHotDog{" +
-                "price=" + price +
-                ", saltCucumber=" + saltCucumber +
+        return "MexicanHotDog{" +
+                "currentHD=" + currentHD +
+                ", price=" + price +
+                ", jalapena=" + jalapena +
                 ", mayone=" + mayone +
                 ", ketchup=" + ketchup +
                 ", onion=" + onion +
