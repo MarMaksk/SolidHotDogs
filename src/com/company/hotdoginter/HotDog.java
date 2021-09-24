@@ -1,5 +1,9 @@
 package com.company.hotdoginter;
 
-public interface HotDog {
+import java.io.Serializable;
+
+public interface HotDog extends Serializable {
     void showComposition();
+
+    String getName();
 }

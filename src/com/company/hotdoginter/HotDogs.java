@@ -8,24 +8,22 @@ public abstract class HotDogs implements HotDog {
     private boolean onion = false;
     private boolean cucumber = false;
 
-    public HotDogs(boolean mayone, boolean ketchup, boolean onion, boolean cucumber, File file) {
+    public HotDogs(boolean mayone, boolean ketchup, boolean onion, boolean cucumber) {
         this.mayone = mayone;
         this.ketchup = ketchup;
         this.onion = onion;
         this.cucumber = cucumber;
-        this.file = file;
     }
-
-    private File file = new File("compositionHD.txt");
 
     private void compositionToConsole(String composition) {
         System.out.println(composition);
     }
 
-    private void compositionToFile(String composition) {
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(file))) {
+    private void compositionToFile(HotDog composition, int numberObj) {
+        File file = new File("composition" + composition.getName() + numberObj + ".txt");
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(file))) {
             file.createNewFile();
-            bw.write(composition);
+            oos.writeObject(composition);
         } catch (IOException e) {
             e.printStackTrace();
         }
