@@ -4,4 +4,8 @@ import com.company.hotdoginter.HotDog;
 
 public interface PaymentInter {
     double pay(HotDog... hotDog);
+
+    void showIncome();
+
+    void showCountSaledHotdog();
 }

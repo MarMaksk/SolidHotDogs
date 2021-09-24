@@ -1,36 +1,32 @@
 package com.company.paymentAndAction;
 
-import com.company.hotdoginter.HotDog;
+public abstract class Payment implements PaymentInter {
+    private volatile static double income = 0;
+    private volatile static int saledHotdog = 0;
 
-public class Payment implements PaymentInter, ActionInter {
     @Override
-    public double pay(HotDog... hotDog) {
-        double discount = checkAction(hotDog);
-        double sum = 0;
-        for (HotDog hd : hotDog)
-            sum += hd.getPrice();
-        return sum * discount / hotDog.length;
+    public void showIncome() {
+        System.out.println(income);
     }
 
-
     @Override
-    public double checkAction(HotDog... hotDog) {
-        switch (hotDog.length) {
-            case 3:
-                return 0.9;
-            case 4:
-                return 0.8;
-            case 5:
-                return 0.7;
-            case 6:
-                return 0.6;
-            case 7:
-                return 0.5;
-            default:
-                break;
-        }
-        if (hotDog.length > 7)
-            return 0.5;
-        return 1;
+    public void showCountSaledHotdog() {
+        System.out.println(saledHotdog);
+    }
+
+    public double getIncome() {
+        return income;
+    }
+
+    public void setIncome(double income) {
+        this.income = income;
+    }
+
+    public int getSaledHotdog() {
+        return saledHotdog;
+    }
+
+    public void setSaledHotdog(int saledHotdog) {
+        this.saledHotdog = saledHotdog;
     }
 }
