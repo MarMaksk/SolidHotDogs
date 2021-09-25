@@ -20,20 +20,29 @@ public class HotDogShop {
     }
 
     public boolean removeHotDog(int index) {
+        checkIndex(index);
         this.hotDog.remove(index);
         return true;
     }
 
-    public void showComposition(int position) {
-        hotDog.get(position).showComposition();
+    public void showComposition(int index) {
+        checkIndex(index);
+        hotDog.get(index).showComposition();
     }
 
-    public String getName(int position) {
-        return hotDog.get(position).getName();
+    public String getName(int index) {
+        checkIndex(index);
+        return hotDog.get(index).getName();
     }
 
-    public double getPrice(int position) {
-        return hotDog.get(position).getPrice();
+    public double getPrice(int index) {
+        checkIndex(index);
+        return hotDog.get(index).getPrice();
+    }
+
+    private void checkIndex(int position) {
+        if (position > (hotDog.size() - 1))
+            throw new IndexOutOfBoundsException("В заказе хотдогов: " + hotDog.size());
     }
 
     public double pay() {
