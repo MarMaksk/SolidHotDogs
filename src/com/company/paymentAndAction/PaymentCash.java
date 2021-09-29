@@ -8,10 +8,7 @@ public class PaymentCash extends PaymentImpl implements Action {
     @Override
     public double pay(List<HotDog> hotDog) {
         double discount = checkAction(hotDog);
-        double sum = 0;
-        for (HotDog hd : hotDog)
-            sum += hd.getPrice();
-        sum = sum * discount / hotDog.size();
+        double sum = hotDog.stream().mapToDouble(HotDog::getPrice).sum() * discount;
         super.setIncome(getIncome() + sum);
         super.setSaledHotdog(getSaledHotdog() + hotDog.size());
         return sum;

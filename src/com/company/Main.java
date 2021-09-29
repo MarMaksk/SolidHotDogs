@@ -16,8 +16,10 @@ public class Main {
         //HotDogShop hds = new HotDogShop(new RussianHotDog(true), new PaymentCash());
         HotDogShop hds = new HotDogShop(new PaymentCash());
         hds.addHotDog(hd);
+        hds.addHotDog(hd);
+        hds.addHotDog(hd);
         System.out.println(hds.pay());
-        hds.getPrice(2);
+        //hds.getPrice(2);
 
     }
 }
