@@ -4,11 +4,11 @@ import com.company.hotdoginter.HotDog;
 
 import java.util.List;
 
-public class PaymentByCart extends Payment {
+public class PaymentByCart extends PaymentImpl {
 
     @Override
     public double pay(List<HotDog> hotDog) {
-        // При оплате картой скидка не предоставляется
+        // there is no dicsount when paing by card
         double sum = 0;
         for (HotDog hd : hotDog)
             sum += hd.getPrice();

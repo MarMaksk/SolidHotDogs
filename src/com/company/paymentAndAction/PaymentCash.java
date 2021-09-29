@@ -4,7 +4,7 @@ import com.company.hotdoginter.HotDog;
 
 import java.util.List;
 
-public class PaymentCash extends Payment implements ActionInter {
+public class PaymentCash extends PaymentImpl implements Action {
     @Override
     public double pay(List<HotDog> hotDog) {
         double discount = checkAction(hotDog);

@@ -1,32 +1,13 @@
 package com.company.paymentAndAction;
 
-public abstract class Payment implements PaymentInter {
-    private volatile static double income = 0;
-    private volatile static int saledHotdog = 0;
+import com.company.hotdoginter.HotDog;
 
-    @Override
-    public void showIncome() {
-        System.out.println(income);
-    }
+import java.util.List;
 
-    @Override
-    public void showCountSaledHotdog() {
-        System.out.println(saledHotdog);
-    }
+public interface Payment {
+    double pay(List<HotDog> hotDog);
 
-    public double getIncome() {
-        return income;
-    }
+    void showIncome();
 
-    public void setIncome(double income) {
-        this.income = income;
-    }
-
-    public int getSaledHotdog() {
-        return saledHotdog;
-    }
-
-    public void setSaledHotdog(int saledHotdog) {
-        this.saledHotdog = saledHotdog;
-    }
+    void showCountSaledHotdog();
 }

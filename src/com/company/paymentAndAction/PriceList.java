@@ -1,7 +1,7 @@
 package com.company.paymentAndAction;
 
 public class PriceList {
-
+    // base data imitation
     private static double priceJap = 8;
     private static double priceMex = 5;
     private static double priceRus = 3;

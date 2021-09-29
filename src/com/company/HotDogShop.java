@@ -1,16 +1,16 @@
 package com.company;
 
 import com.company.hotdoginter.HotDog;
-import com.company.paymentAndAction.PaymentInter;
+import com.company.paymentAndAction.Payment;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class HotDogShop {
     private List<HotDog> hotDog = new ArrayList<>();
-    private PaymentInter payment;
+    private Payment payment;
 
-    public HotDogShop(PaymentInter payment) {
+    public HotDogShop(Payment payment) {
         this.payment = payment;
     }
 

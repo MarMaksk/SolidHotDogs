@@ -4,6 +4,6 @@ import com.company.hotdoginter.HotDog;
 
 import java.util.List;
 
-public interface ActionInter {
+public interface Action {
     double checkAction(List<HotDog> hotDog);
 }
