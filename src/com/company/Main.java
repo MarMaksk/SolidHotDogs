@@ -2,7 +2,7 @@ package com.company;
 
 import com.company.hotdoginter.HotDog;
 import com.company.hotdogsreciept.RussianHotDog;
-import com.company.paymentAndAction.PaymentCash;
+import com.company.paymentAndAction.paymentService.PaymentCash;
 
 public class Main {
 

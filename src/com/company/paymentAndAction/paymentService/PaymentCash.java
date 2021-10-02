@@ -1,6 +1,8 @@
-package com.company.paymentAndAction;
+package com.company.paymentAndAction.paymentService;
 
 import com.company.hotdoginter.HotDog;
+import com.company.paymentAndAction.Action;
+import com.company.paymentAndAction.PaymentImpl;
 
 import java.util.List;
 
