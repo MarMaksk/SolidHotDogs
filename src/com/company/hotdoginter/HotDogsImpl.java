@@ -2,7 +2,7 @@ package com.company.hotdoginter;
 
 import java.io.*;
 
-public abstract class HotDogs implements HotDog {
+public abstract class HotDogsImpl implements HotDog {
 
     public void compositionToConsole(HotDog composition) {
         System.out.println(composition);

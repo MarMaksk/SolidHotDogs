@@ -2,10 +2,10 @@ package com.company.hotdogsreciept;
 
 import com.company.hotdoginter.BuilderHotDog;
 import com.company.hotdoginter.HotDog;
-import com.company.hotdoginter.HotDogs;
+import com.company.hotdoginter.HotDogsImpl;
 import com.company.paymentAndAction.PriceList;
 
-public class JapanHotDog extends HotDogs {
+public class JapanHotDog extends HotDogsImpl {
 
     private static int countJapHD = 0;
     private int currentHD;
